@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message CustomerReq {
+    string description = 1;
+}
+
+message CustomerRes {
+    string id = 1;
+}
+
+service CustomerService {
+    rpc New(CustomerReq) returns(CustomerRes);
+}
